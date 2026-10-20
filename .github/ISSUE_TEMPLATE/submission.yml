@@ -1,0 +1,72 @@
+name: Final project submission
+description: Submit your finished final project for grading
+title: "Submission: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in when your project is finished and pushed. Put your name after "Submission:" in the title.
+        შეავსეთ, როცა პროექტი დასრულებულია და ატვირთულია. სათაურში "Submission:"-ის შემდეგ ჩაწერეთ თქვენი სახელი.
+  - type: input
+    id: name
+    attributes:
+      label: Full name
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Link to your repository
+      placeholder: https://github.com/your-username/js205-recipe-book
+    validations:
+      required: true
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      options:
+        - Recipe Book
+        - Social Feed
+        - Online Store
+        - Another DummyJSON idea
+        - My own idea
+    validations:
+      required: true
+  - type: input
+    id: live
+    attributes:
+      label: Live link (bonus X6)
+      description: Only if you published the site with GitHub Pages.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: Everything is pushed. I cloned my repository into a new folder and it runs with Live Server.
+          required: true
+        - label: The app logic is my own JavaScript. No JavaScript libraries or frameworks. Tailwind or Bootstrap from a CDN is fine.
+          required: true
+        - label: My README has a description, a screenshot, how to run, and the endpoints I use.
+          required: true
+        - label: AI_LOG.md is committed and complete, or unchanged because I did not use AI.
+          required: true
+        - label: I can explain every function in my code.
+          required: true
+  - type: checkboxes
+    id: bonus
+    attributes:
+      label: Bonus tasks I did
+      options:
+        - label: X1 System design diagram
+        - label: X2 Debounced search
+        - label: X3 Infinite scroll
+        - label: X4 Live updates with WebSockets
+        - label: X5 Shareable URL
+        - label: X6 Published with GitHub Pages
+        - label: X7 Stale requests are cancelled
+        - label: X8 Dark mode
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything I should know
+      description: Known problems, or parts you are proud of. Optional.

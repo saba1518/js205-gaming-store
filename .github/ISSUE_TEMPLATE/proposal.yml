@@ -1,0 +1,59 @@
+name: Own idea proposal
+description: Get your own project idea approved before you start
+title: "Proposal: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in before you write code. Wait for the answer in this issue. The checklist is in assignment/PROJECTS.md, section "Your own idea".
+        შეავსეთ კოდის წერის დაწყებამდე და დაელოდეთ პასუხს. შესამოწმებელი სია: assignment/PROJECTS_ka.md, ნაწილი „საკუთარი იდეა“.
+  - type: input
+    id: name
+    attributes:
+      label: Full name
+    validations:
+      required: true
+  - type: input
+    id: idea
+    attributes:
+      label: The app in one sentence
+      placeholder: A weather app that shows the forecast for any city and remembers my favorite cities.
+    validations:
+      required: true
+  - type: input
+    id: api
+    attributes:
+      label: Link to the API documentation
+    validations:
+      required: true
+  - type: textarea
+    id: endpoints
+    attributes:
+      label: Three requests you will use
+      description: Full URLs. A list or search, one item, and one more.
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: I tested the API
+      options:
+        - label: The URLs open in the browser and show JSON, without a secret key.
+          required: true
+        - label: fetch works from a Live Server page. There is no CORS error in the Console.
+          required: true
+        - label: I know the request limit of this API.
+          required: true
+  - type: textarea
+    id: rubric
+    attributes:
+      label: How will you reach each category?
+      description: One line for each of B, C, D and E. See assignment/SCORING.md.
+      value: |
+        B (list and detail view):
+        C (search, filter, sort, pagination):
+        D (form and POST):
+        E (what is saved in localStorage):
+    validations:
+      required: true

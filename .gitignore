@@ -1,0 +1,13 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# AI agent folders
+.commandcode/
+.claude/
+.cursor/
+
+# Not needed in this project
+node_modules/
