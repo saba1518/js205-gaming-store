@@ -4,7 +4,7 @@ const products = [
         title: "NVIDIA RTX 3060 12GB",
         category: "GPU",
         price: 249,
-        image: "https://unsplash.com",
+        image: "images/7577-7599-removebg-preview.png",
         description: "12GB graphics card for gaming."
     },
     {
@@ -12,7 +12,7 @@ const products = [
         title: "NVIDIA RTX 4060 Ti",
         category: "GPU",
         price: 379,
-        image: "https://unsplash.com",
+        image: "images/images-removebg-preview.png",
         description: "Graphics card for smooth gaming."
     },
     {
@@ -44,7 +44,7 @@ const products = [
         title: "Intel Core i5-12400F",
         category: "CPU",
         price: 129,
-        image: "https://unsplash.com",
+        image: "images/Gemini_Generated_Image_3jpbie3jpbie3jpb-removebg-preview.png",
         description: "Six-core Intel desktop processor."
     },
     {
@@ -108,7 +108,7 @@ const products = [
         title: "Crucial P3 Plus 2TB",
         category: "SSD",
         price: 119,
-        image: "https://unsplash.com",
+        image: "images/Crucial P3 Plus 2TB.png",
         description: "Large-capacity NVMe SSD."
     },
     {
