@@ -1,20 +1,36 @@
+
 # AI log
 
-Every request made to an AI assistant while building this project, oldest first.
+ 1
+**Prompt:**
+> Help me find and fix errors in my JavaScript code.
 
-- AI coding agents such as Command Code add entries here by themselves. The rules are in `AGENTS.md`.
-- If you use a chat AI in the browser, add the entry yourself, in the same format.
-- Do not edit or delete entries. If you did not use AI, leave this file as it is.
+**Type:** debug
 
-AI აგენტი ყველა თქვენს მოთხოვნას აქ თვითონ წერს. თუ ბრაუზერის ჩატს იყენებთ (ChatGPT, Claude, Gemini), ჩანაწერი იმავე ფორმატით თქვენ დაამატეთ. ჩანაწერებს ნუ შეცვლით და ნუ წაშლით.
+**What I did:** Used AI to check the code and find possible errors.
 
-Format:
-
-    ### 1 · 2026-10-14 19:42
-    **Prompt:**
-    > your message, word for word
-    **Type:** explain | debug | review | plan | code | refused | other
-    **What I did:** one or two sentences.
-    **Files changed:** `js/api.js`, or "none"
+**Files changed:** `app.js`, `api.js`
 
 ---
+
+ 2
+**Prompt:**
+> Check if my HTML and CSS work correctly with my JavaScript.
+
+**Type:** review
+
+**What I did:** Used AI to check whether the HTML elements and CSS classes match the JavaScript code.
+
+**Files changed:** none
+
+---
+
+ 3
+**Prompt:**
+> Okay, now I need the last thing to do. I need to check my code and submit it.
+
+**Type:** review
+
+**What I did:** Asked AI to review the project and check whether it was ready for submission.
+
+**Files changed:** none

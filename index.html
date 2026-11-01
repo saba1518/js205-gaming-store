@@ -3,159 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC GEAR | Computer Parts</title>
+    <title>GEAR MARKET | Online Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <a href="#" class="logo">PC <span>GEAR</span></a>
+        <a href="#home" class="logo">GEAR <span>MARKET</span></a>
 
         <nav class="nav">
             <a href="#home">Home</a>
-            <a href="#products">Components</a>
-            <a href="#contact">Contact</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Checkout</a>
         </nav>
 
-        <button class="cart-button" id="cart-button">
-            🛒 Cart <span id="cart-count">0</span>
-        </button>
+        <div class="cart-wrapper">
+            <button class="cart-button" id="cart-button"
+                aria-expanded="false" aria-controls="cart-dropdown">
+                <span>🛒</span> My Cart
+                <span id="cart-count">0</span>
+            </button>
+
+            <div class="cart-dropdown" id="cart-dropdown" hidden>
+                <div class="cart-heading">
+                    <h3>Your Shopping Cart</h3>
+                    <button type="button" id="close-cart" class="close-cart"
+                        aria-label="Close cart">×</button>
+                </div>
+
+                <div id="cart-items" class="cart-items"></div>
+
+                <div class="cart-bottom">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <strong id="cart-subtotal">$0.00</strong>
+                    </div>
+
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <strong id="cart-total">$0.00</strong>
+                    </div>
+
+                    <button class="main-button checkout-button"
+                        id="checkout-button" type="button">
+                        Proceed to Checkout →
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <p class="small-title">BUILD YOUR DREAM PC</p>
-                <h1>POWER YOUR<br>GAMING SETUP</h1>
-                <p>
-                    Find the best components for your gaming PC.
-                    Upgrade your performance with PC GEAR.
+                <p class="small-title">EVERYTHING YOU NEED IN ONE PLACE</p>
+
+                <h1>SHOP SMART.<br><span>LIVE BETTER.</span></h1>
+
+                <p class="hero-description">
+                    Discover electronics, home products, groceries, fashion,
+                    and much more at GEAR MARKET.
                 </p>
-                <a href="#products" class="main-button">Explore Parts</a>
+
+                <a href="#products" class="main-button">
+                    Explore Products <span>→</span>
+                </a>
+
+                <div class="hero-benefits">
+                    <span>✓ Wide product selection</span>
+                    <span>✓ Easy shopping</span>
+                </div>
             </div>
 
             <div class="hero-image">
                 <img
-                    src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=1000&q=80"
-                    alt="Gaming computer setup"
-                >
+                    src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1200&q=85"
+                    alt="Modern computer workstation">
             </div>
         </section>
 
         <section class="products-section" id="products">
             <div class="section-heading">
                 <div>
-                    <p class="small-title">OUR COLLECTION</p>
-                    <h2>PC Components</h2>
+                    <p class="small-title">EXPLORE OUR COLLECTION</p>
+                    <h2>Our Products</h2>
                 </div>
+
                 <p class="section-description">
-                    Everything you need to build your PC.
+                    Browse different categories and find what you need.
                 </p>
             </div>
 
-            <div class="filters">
-                <input
-                    type="search"
-                    id="search-input"
-                    placeholder="Search components..."
-                >
+            <div class="shop-layout">
 
-                <select id="category-select">
-                    <option value="all">All Components</option>
-                    <option value="GPU">Graphics Cards</option>
-                    <option value="CPU">Processors</option>
-                    <option value="RAM">Memory</option>
-                    <option value="SSD">Storage</option>
-                    <option value="Motherboard">Motherboards</option>
-                    <option value="PSU">Power Supplies</option>
-                </select>
+                <!-- LEFT CATEGORY SIDEBAR -->
+                <aside class="category-sidebar">
+                    <h3>Categories</h3>
 
-                <select id="sort-select">
-                    <option value="default">Default Order</option>
-                    <option value="low-high">Price: Low to High</option>
-                    <option value="high-low">Price: High to Low</option>
-                </select>
-            </div>
+                    <div id="category-list" class="category-list">
+                        <p class="category-loading">Loading categories...</p>
+                    </div>
+                </aside>
 
-            <p id="loading" class="message" hidden>Loading products...</p>
-            <p id="error-message" class="message error" hidden></p>
-            <p id="empty-message" class="message" hidden>
-                No products found.
-            </p>
+                <!-- RIGHT PRODUCT AREA -->
+                <div class="catalog-content">
 
-            <div class="products-grid" id="products-container"></div>
-        </section>
+                    <div class="filters">
+                        <input
+                            type="search"
+                            id="search-input"
+                            placeholder="Search products..."
+                            aria-label="Search products">
 
-        <section class="cart-section" id="cart">
-            <div class="section-heading">
-                <div>
-                    <p class="small-title">YOUR SELECTION</p>
-                    <h2>Shopping Cart</h2>
+                        <select id="sort-select" aria-label="Sort products">
+                            <option value="default">Default Order</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                            <option value="name-a-z">Name: A to Z</option>
+                            <option value="name-z-a">Name: Z to A</option>
+                        </select>
+                    </div>
+
+                    <p id="active-category" class="active-category">
+                        All Products
+                    </p>
+
+                    <p id="product-count" class="product-count"></p>
+
+                    <p id="loading" class="message" hidden>
+                        Loading products...
+                    </p>
+
+                    <p id="error-message" class="message error" hidden></p>
+
+                    <p id="empty-message" class="message" hidden>
+                        No products found. Try another search or category.
+                    </p>
+
+                    <div class="products-grid" id="products-container"></div>
+
+                    <div class="pagination">
+    <button id="previous-page" type="button" disabled>← Previous</button>
+    <span id="page-info">Page 1</span>
+    <button id="next-page" type="button">Next →</button>
+</div>
                 </div>
-            </div>
-
-            <div id="cart-items" class="cart-items"></div>
-
-            <div class="cart-bottom">
-                <p>Total: <strong id="cart-total">$0.00</strong></p>
-                <button class="main-button" id="checkout-button">
-                    Checkout
-                </button>
             </div>
         </section>
 
         <section class="checkout-section" id="contact">
             <div class="checkout-info">
-                <p class="small-title">READY TO BUILD?</p>
+                <p class="small-title">ALMOST THERE</p>
                 <h2>Complete Your Order</h2>
-                <p>Enter your information to place your order.</p>
+                <p>
+                    Enter your delivery details below to place your order.
+                </p>
+
+                <div class="checkout-note">
+                    <span>🔒</span>
+                    Your information is used for order processing.
+                </div>
             </div>
 
-            <form id="checkout-form">
-                <label for="name">Full Name</label>
-                <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                    minlength="2"
-                    required
-                >
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Your full name"
+                            minlength="2"
+                            required>
+                    </div>
 
-                <label for="email">Email Address</label>
-                <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    required
-                >
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            required>
+                    </div>
+                </div>
 
-                <label for="address">Delivery Address</label>
-                <input
-                    id="address"
-                    name="address"
-                    type="text"
-                    placeholder="Your address"
-                    minlength="5"
-                    required
-                >
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="+995 5XX XX XX XX"
+                        required>
+                </div>
 
-                <button type="submit" class="main-button">
-                    Place Order
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter your delivery address"
+                        rows="3"
+                        minlength="5"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="main-button place-order-button">
+                    Place Order <span>→</span>
                 </button>
 
-                <p id="form-message" class="messagE"></p>
+                <p id="form-message" class="form-message" aria-live="polite"></p>
             </form>
         </section>
     </main>
 
     <footer class="footer">
-        <a href="#" class="logo">PC <span>GEAR</span></a>
-        <p>Build it. Upgrade it. Game on.</p>
-        <p class="copyright">© 2026 PC GEAR. All rights reserved.</p>
+        <a href="#home" class="logo">GEAR <span>MARKET</span></a>
+        <p>Everything you need. All in one place.</p>
+        <p class="copyright">© 2026 GEAR MARKET. All rights reserved.</p>
     </footer>
 
+    <script src="api.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

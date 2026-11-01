@@ -1,53 +1,70 @@
-# JavaScript 205 — Final Project
+# GEAR MARKET
 
-> **This file is yours.** Read the assignment first. When you start working, delete everything above the line and fill in the skeleton below it with your own project.
+GEAR MARKET is an online shopping website where users can browse and buy different types of products, such as electronics, clothes, shoes, food, and more.
 
-**Start here:** [assignment/README.md](assignment/README.md) · **ქართულად:** [assignment/README_ka.md](assignment/README_ka.md)
-
-| | English | ქართული |
-|---|---|---|
-| Rules, how to start, how to submit | [README.md](assignment/README.md) | [README_ka.md](assignment/README_ka.md) |
-| The projects you can choose | [PROJECTS.md](assignment/PROJECTS.md) | [PROJECTS_ka.md](assignment/PROJECTS_ka.md) |
-| Every point and how it is checked | [SCORING.md](assignment/SCORING.md) | [SCORING_ka.md](assignment/SCORING_ka.md) |
-
-To begin, click **Use this template → Create a new repository** at the top of this page. Do not fork.
-
----
-
-# Project name
-
-One or two sentences: what is this app, and who is it for?
-
-- **Project:** Recipe Book / Social Feed / Online Store / my own idea
-- **Live demo:** the link, if you published it with GitHub Pages
+The name GEAR MARKET was originally chosen for a computer-parts shopping website. At the beginning of the project, my idea was to create a store specifically for computer components. However, as I continued working, I decided to change the idea and make it a general online store. I kept the original name because I liked it, and that is how GEAR MARKET became the name of my project.
 
 ## Screenshots
 
-Put at least one screenshot here. Save the image in a `docs/` folder and show it like this: `![Home page](docs/home.png)`
+![GEAR MARKET Home Page](docs/home.png)
 
-## How to run
+## How to Run
 
-1. Clone the repository.
-2. Open `index.html` with Live Server.
+1. Download or clone the project from GitHub.
+2. Open the project folder in Visual Studio Code.
+3. Find `index.html`.
+4. Open it using the Live Server extension.
+5. The website should now be running in your browser.
 
 ## Features
 
-- …
+GEAR MARKET includes several features that make shopping easier:
+
+- Browse different products.
+- Search for products by name.
+- Filter products using categories.
+- Sort products by price.
+- View product details.
+- Add products to the shopping cart.
+- Change product quantities.
+- Remove products from the cart.
+- Save cart information using localStorage.
+- Proceed to checkout and place an order.
 
 ## API
 
-| Request | Used for |
-|---|---|
-| `GET https://dummyjson.com/recipes?limit=12&skip=0` | The list on the home page |
+This project uses the **DummyJSON API** to receive product information.
 
-## Bonus tasks
+API link: https://dummyjson.com/products
 
-Which ones you did, and where to see them.
+An API allows a website to communicate with another service and receive information. In my project, DummyJSON provides product information that I use to display products on the website.
 
-## What I would improve
+## Technologies Used
 
-Known problems, and what you would do with more time.
+- HTML
+- CSS
+- JavaScript
+- DummyJSON API
+- localStorage
 
-## AI use
+## Bonus Tasks
 
-One or two sentences: did you use AI, and for what? The details are in `AI_LOG.md`.
+To be completed after checking which bonus tasks I have successfully implemented.
+
+## What I Would Improve
+
+If I had more experience with JavaScript, HTML, and CSS, I would improve many things about this project.
+
+I would make the design more attractive, add more functionality, and improve different parts of the website.
+
+This project may look simple, but creating it was not always easy, especially because JavaScript was quite challenging for me. With more practice and experience, I believe I could make it much better.
+
+## AI Use
+
+I used AI during this project mainly to understand things I found difficult and to find mistakes in my code.
+
+Sometimes, when something did not work as expected, I used AI to help me understand what was wrong and how I could fix it. I also used it to explain some JavaScript concepts that I did not fully understand.
+
+I did not use AI for everything. I already had some experience with HTML and CSS before starting this project, and I was comfortable working with them. JavaScript was more challenging because it works differently and requires a different way of thinking.
+
+I am still a beginner, but this project helped me understand JavaScript better, and I believe I will continue improving my skills in the future.
